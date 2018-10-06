@@ -1,0 +1,24 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "description": "Example App to learn google sign in with muneem web framework",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "muneem",
+    "sign in",
+    "google",
+    "anuvadak",
+    "satr",
+  ],
+  "author": "Amit Gupta (http://amitkumargupta.work)",
+  "license": "MIT",
+  "dependencies": {
+    "anuvadak": "^2.1.2",
+    "google-auth-library": "^2.0.0",
+    "muneem": "^2.3.2",
+    "satr": "^1.0.0"
+  }
+}
