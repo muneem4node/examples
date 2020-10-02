@@ -83,21 +83,17 @@ const client = new OAuth2Client(CLIENT_ID);
 async function verifyTokenId(token) {
     const ticket = await client.verifyIdToken({
         idToken: token,
-        audience: CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
-        // Or, if multiple clients access the backend:
-        //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
+        audience: CLIENT_ID,
+        //maxExpiry: 
     });
-    const payload = ticket.getPayload();
+    return ticket.getPayload();
     
-    if( payload['aud'] !== CLIENT_ID){
-        //raise a security alarm
-    }else{
+    
     const userid = payload['sub'];
     return userid;
     //check if the user is present in the DB
     //if not save in DB
     //then create a new session and send session id to the user. So that you need not to verify token id for every request
-    }
     // If request specified a G Suite domain:
     //const domain = payload['hd'];
 }
